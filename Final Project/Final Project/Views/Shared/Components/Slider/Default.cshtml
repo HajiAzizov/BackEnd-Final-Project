@@ -1,0 +1,29 @@
+﻿@model List<SliderVM>
+
+<section class="container container-self hero">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model)
+            {
+                <div class="swiper-slide">
+                    <div class="row g-4 align-items-center pad-self">
+                        <div class="col-lg-8">
+                            <h2>@item.Title</h2>
+                            <p>@item.Description</p>
+                            <a href="#" class="by-nw">
+                                Buy Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="~/@item.Img" alt="slider image" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
