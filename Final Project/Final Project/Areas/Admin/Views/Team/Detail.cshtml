@@ -1,0 +1,18 @@
+﻿@model TeamVM
+
+@{
+    ViewData["Title"] = "Team Member Detail";
+}
+
+<div class="container mt-4">
+    <h2>@Model.Name - Details</h2>
+
+    <div class="card mt-3" style="width: 300px;">
+        <img src="~/@Model.Img" class="card-img-top" alt="@Model.Name" style="object-fit: cover; height: 300px;" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text"><strong>Position:</strong> @Model.Position</p>
+            <a asp-action="Index" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</div>

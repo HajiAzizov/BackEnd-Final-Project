@@ -39,11 +39,23 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IPartnerService, PartnerService>();
+builder.Services.AddScoped<IFeaturedBookService, FeaturedBookService>();
+builder.Services.AddScoped<IBestSellingBookService, BestSellingBookService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    await DbInitializer.SeedRoles(roleManager);
+}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AboutVM>
+
+@{
+    var about = Model?.FirstOrDefault();
+}
+
+@if (about != null)
+{
+    <section class="py-5 about-main container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <h2>@Html.Raw(about.Title)</h2>
+                <p>@about.Desc</p>
+                <a href="/products" class="by-nw">
+                    Shop Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <img src="@about.Img" alt="About Image" />
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <div class="text-center py-5">
+        <h4>About content not found.</h4>
+    </div>
+}

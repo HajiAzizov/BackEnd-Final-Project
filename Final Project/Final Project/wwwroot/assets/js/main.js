@@ -62,3 +62,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // The hover effect is now handled in CSS for better performance
 });
+
+const userLat = 40.3779;
+const userLng = 49.8919;
+
+function initMap() {
+  const userLocation = { lat: userLat, lng: userLng };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: userLocation,
+  });
+
+  new google.maps.Marker({
+    position: userLocation,
+    map: map,
+    title: "User Location",
+  });
+}

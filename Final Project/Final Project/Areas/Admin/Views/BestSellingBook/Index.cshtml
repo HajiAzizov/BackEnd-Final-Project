@@ -1,0 +1,43 @@
+﻿@model List<BestSellingBookVM>
+
+@{
+    ViewData["Title"] = "Best Selling Books";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Best Selling Books</h2>
+        <a class="btn btn-success" asp-action="Create">+ Add New Book</a>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th style="width: 180px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="~/@book.Img" alt="Book image" style="width: 100px; height: 100px; object-fit: cover; border-radius: 0;" />
+                    </td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Description</td>
+                    <td>$@book.Price</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Detail" asp-route-id="@book.Id">Detail</a>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@book.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

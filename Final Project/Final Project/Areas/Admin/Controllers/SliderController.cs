@@ -1,10 +1,12 @@
 ﻿using Final_Project.Services.Interfaces;
 using Final_Project.ViewModels.Admin.Slider;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_Project.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;

@@ -1,0 +1,27 @@
+﻿@model List<FeaturedBookVM>
+
+<section class="featured-books">
+    <h4 class="subtitle">Some Quality Items</h4>
+    <h2 class="title">Featured Books</h2>
+
+    <div class="book-container">
+        @foreach (var book in Model)
+        {
+            <div class="book-card">
+                <div class="image-container">
+                    <img src="~/@book.Img" alt="@book.Title" />
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                    </div>
+                </div>
+                <h3>@book.Title</h3>
+                <p class="author">@book.Author</p>
+                <p class="price">$ @book.Price.ToString("0.00")</p>
+            </div>
+        }
+    </div>
+
+    <div class="view-all">
+        <a href="Product.html">View All Products →</a>
+    </div>
+</section>

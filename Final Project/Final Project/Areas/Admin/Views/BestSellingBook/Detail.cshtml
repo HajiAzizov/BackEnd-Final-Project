@@ -1,0 +1,21 @@
+﻿@model BestSellingBookVM
+
+@{
+    ViewData["Title"] = "Best Selling Book Details";
+}
+
+<div class="container mt-4">
+    <h2>Best Selling Book Details</h2>
+
+    <div class="card" style="max-width: 600px;">
+        <img src="~/@Model.Img" class="card-img-top" alt="@Model.Title" style="height: 300px; object-fit: cover;" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">By @Model.Author</h6>
+            <p class="card-text">@Model.Description</p>
+            <p class="card-text"><strong>Price: </strong>$@Model.Price</p>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>

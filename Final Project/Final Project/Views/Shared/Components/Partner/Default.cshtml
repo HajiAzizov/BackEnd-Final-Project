@@ -1,0 +1,12 @@
+﻿@model List<PartnerVM>
+
+<section class="partner-section">
+    <div class="partner-container">
+        @foreach (var item in Model)
+        {
+            <div class="partner-section">
+                <img src="@item.Img" alt="Partner Image" />
+            </div>
+        }
+    </div>
+</section>

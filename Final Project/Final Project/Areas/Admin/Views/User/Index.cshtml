@@ -1,0 +1,69 @@
+﻿@model Final_Project.ViewModels.Admin.User.UserListVM
+
+@{
+    ViewData["Title"] = "İstifadəçilər və Rollar";
+    var allRoles = ViewBag.AllRoles as List<string>; // ViewBag-dən alırıq
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">İstifadəçilər və Rollar</h2>
+
+    <table class="table table-striped table-hover shadow rounded">
+        <thead class="table-dark">
+            <tr>
+                <th>Email</th>
+                <th>Rolls</th>
+                <th>Add New Roll</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td class="align-middle">@user.Email</td>
+
+                    <td class="align-middle">
+                        @if (Model.UserRoles.ContainsKey(user.Id))
+                        {
+                            @foreach (var role in Model.UserRoles[user.Id])
+                            {
+                                <span class="badge bg-primary me-2">
+                                    @role
+                                    <form asp-action="RemoveRole" method="post" class="d-inline ms-1">
+                                        <input type="hidden" name="userId" value="@user.Id" />
+                                        <input type="hidden" name="role" value="@role" />
+                                        <button type="submit" class="btn btn-sm btn-danger">x</button>
+                                    </form>
+                                </span>
+                            }
+                        }
+                    </td>
+
+                    <td class="align-middle">
+                        <form asp-action="AddRole" method="post" class="d-flex flex-column gap-2">
+                            <input type="hidden" name="userId" value="@user.Id" />
+
+                            <div class="d-flex align-items-center gap-2">
+                                <select name="role" class="form-select" style="max-width: 200px;">
+                                    <option disabled selected>Choose Roles</option>
+                                    @foreach (var role in allRoles)
+                                    {
+                                        <option value="@role">@role</option>
+                                    }
+                                </select>
+
+                                <button type="submit" class="btn btn-success">Add Roles</button>
+                            </div>
+
+                            @if (TempData["RoleError_" + user.Id] != null)
+                            {
+                                <span class="text-danger mt-1">@TempData["RoleError_" + user.Id]</span>
+                            }
+                        </form>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

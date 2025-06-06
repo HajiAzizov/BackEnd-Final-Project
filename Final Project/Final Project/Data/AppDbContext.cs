@@ -13,6 +13,9 @@ namespace Final_Project.Data
         public DbSet<About> Abouts { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<Partner> Partners { get; set; }
+        public DbSet<FeaturedBook> FeaturedBooks { get; set; }
+        public DbSet<BestSellingBook> BestSellingBooks { get; set; }
 
     }
 }

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<TeamVM>
+
+<section class="team py-5">
+    <div class="container container-self">
+        <h4 class="subtitle text-center">Our Team</h4>
+        <h2 class="title text-center">Get to know our team</h2>
+        <div class="row g-0 text-center">
+            @foreach (var member in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-member">
+                        <img src="@member.Img" alt="@member.Name" />
+                        <div class="overlay-self">
+                            <h5>@member.Name</h5>
+                            <p>@member.Position</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

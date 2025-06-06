@@ -1,0 +1,33 @@
+﻿@model BestSellingBookVM
+
+@if (Model != null)
+{
+    <section class="bsb-section">
+        <div class="bsb-container">
+            <div class="bsb-showcase">
+                <div class="bsb-image-wrapper">
+                    <img src="~/@Model.Img"
+                         alt="@Model.Title"
+                         class="bsb-cover-image"
+                         style="object-fit: cover;" />
+                </div>
+                <div class="bsb-content">
+                    <h2 class="bsb-heading">Best Selling Book</h2>
+                    <div class="bsb-divider"></div>
+
+                    <p class="bsb-author-text">By @Model.Author</p>
+
+                    <h3 class="bsb-title-text">@Model.Title</h3>
+
+                    <p class="bsb-description-text">
+                        @Model.Description
+                    </p>
+
+                    <p class="bsb-price-text">$ @Model.Price</p>
+
+                    <a href="#" class="bsb-cta-button">Shop It Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+}

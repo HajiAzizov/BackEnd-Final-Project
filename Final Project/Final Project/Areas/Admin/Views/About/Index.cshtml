@@ -1,0 +1,51 @@
+﻿@model List<AboutVM>
+@{
+    ViewData["Title"] = "About List";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>About List</h2>
+        <a class="btn btn-success" asp-action="Create">+ Add New About</a>
+    </div>
+
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Image</th>
+
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var about in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="/@Model.FirstOrDefault().Img" alt="About Image" style="width: 100px; height: 100px; object-fit: cover; border-radius: 0;" />
+                    </td>
+                    <td>@about.Title</td>
+                    <td>
+                        @{
+                            var maxLength = 100;
+                            var shortDesc = about.Desc.Length > maxLength ? about.Desc.Substring(0, maxLength) + "..." : about.Desc;
+                        }
+                        @shortDesc
+                        @if (about.Desc.Length > maxLength)
+                        {
+                            <a asp-action="Detail" asp-route-id="@about.Id">Read More</a>
+                        }
+                    </td>
+                    
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Detail" asp-route-id="@about.Id">Detail</a>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@about.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

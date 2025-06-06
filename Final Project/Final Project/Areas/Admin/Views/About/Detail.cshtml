@@ -1,0 +1,16 @@
+﻿@model AboutVM
+@{
+    ViewData["Title"] = "About Detail";
+}
+
+<div class="container mt-4">
+    <h2>About Detail</h2>
+    <div class="card mt-3" style="width: 400px;">
+        <img src="~/@Model.Img" class="card-img-top" alt="About Image" style="object-fit: cover; height: 250px;" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-text">@Model.Desc</p>
+            <a asp-action="Index" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</div>

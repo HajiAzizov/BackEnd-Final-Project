@@ -1,0 +1,36 @@
+﻿@model TeamEditVM
+
+@{
+    ViewData["Title"] = "Edit Team Member";
+}
+
+<div class="container mt-4">
+    <h2>Edit Team Member</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data" class="mt-3">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Position" class="form-label"></label>
+            <input asp-for="Position" class="form-control" />
+            <span asp-validation-for="Position" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Img" class="form-label">Change Image (Optional)</label>
+            <input asp-for="Img" type="file" class="form-control" />
+            <span asp-validation-for="Img" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Update</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Back</a>
+    </form>
+</div>
+
+

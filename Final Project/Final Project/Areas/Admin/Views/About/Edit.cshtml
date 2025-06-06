@@ -1,0 +1,32 @@
+﻿@model AboutEditVM
+@{
+    ViewData["Title"] = "Edit About";
+}
+
+<div class="container mt-4">
+    <h2>Edit About</h2>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data" class="mt-3">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Desc" class="form-label"></label>
+            <textarea asp-for="Desc" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Img" class="form-label">Change Image</label>
+            <input asp-for="Img" type="file" class="form-control" />
+            <span asp-validation-for="Img" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Update</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>
