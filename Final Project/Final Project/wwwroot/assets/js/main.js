@@ -79,3 +79,49 @@ function initMap() {
     title: "User Location",
   });
 }
+
+
+document.querySelectorAll('.toggle-password').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const targetId = toggle.getAttribute('data-target');
+    const input = document.getElementById(targetId);
+    const icon = toggle.querySelector('i');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.classList.remove('fa-eye-slash');
+      icon.classList.add('fa-eye');
+    } else {
+      input.type = 'password';
+      icon.classList.remove('fa-eye');
+      icon.classList.add('fa-eye-slash');
+    }
+  });
+});
+
+  const rangeMin = document.getElementById('rangeMin');
+  const rangeMax = document.getElementById('rangeMax');
+  const rangeMinVal = document.getElementById('rangeMinVal');
+  const rangeMaxVal = document.getElementById('rangeMaxVal');
+
+  function updateRange() {
+    let minVal = parseInt(rangeMin.value);
+    let maxVal = parseInt(rangeMax.value);
+
+    if (minVal > maxVal - 1) {
+      minVal = maxVal - 1;
+      rangeMin.value = minVal;
+    }
+    if (maxVal < minVal + 1) {
+      maxVal = minVal + 1;
+      rangeMax.value = maxVal;
+    }
+
+    rangeMinVal.textContent = `$${minVal}`;
+    rangeMaxVal.textContent = `$${maxVal}`;
+  }
+
+  rangeMin.addEventListener('input', updateRange);
+  rangeMax.addEventListener('input', updateRange);
+
+  // Initialize values
+  updateRange();

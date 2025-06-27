@@ -1,0 +1,46 @@
+﻿@model List<AuthorVM>
+
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Authors</h2>
+        <a class="btn btn-success" asp-action="Create">+ Add New Author</a>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Image</th>
+                <th>Full Name</th>
+                <th style="width: 180px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var author in Model)
+            {
+                    <tr>
+                        <td>
+                        @if (!string.IsNullOrEmpty(author.Img))
+                        {
+                                    <img src="~/uploads/authors/@author.Img" alt="@author.FullName"
+                                         style="width: 80px; height: 80px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                                    <span>No image</span>
+                        }
+                        </td>
+                        <td>@author.FullName</td>
+                        <td>
+                            <a class="btn btn-info btn-sm me-1" asp-action="Detail" asp-route-id="@author.Id"><i class="fa fa-eye"></i> Detail</a>
+                            <a class="btn btn-warning btn-sm me-1" asp-action="Edit" asp-route-id="@author.Id"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@author.Id" onclick="return confirm('Are you sure you want to delete this author?');"><i class="fa fa-trash"></i> Delete</a>
+                        </td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+﻿@model AuthorVM
+
+@{
+    ViewData["Title"] = "Author Details";
+}
+
+<div class="container mt-4">
+    <h2>Author Details</h2>
+
+    <div class="mb-3">
+        <label><strong>Full Name:</strong></label>
+        <p>@Model.FullName</p>
+    </div>
+
+    <div class="mb-3">
+        <label><strong>Image:</strong></label><br />
+        @if (!string.IsNullOrEmpty(Model.Img))
+        {
+            <img src="~/uploads/authors/@Model.Img" alt="Author Image" style="width:200px; height:auto;" />
+        }
+        else
+        {
+            <p>No image available.</p>
+        }
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

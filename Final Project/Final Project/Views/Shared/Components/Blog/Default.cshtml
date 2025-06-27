@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BlogVM>
+
+<main>
+    <section class="hero-2">
+        <h2>Blog</h2>
+    </section>
+
+    <section class="blog py-5">
+        <div class="container container-self">
+            <h4 class="subtitle text-center">Our Blog</h4>
+            <h2 class="title text-center">Read Our Blog</h2>
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <img src="~/uploads/blog/@item.Img" class="img-fluid" alt="@item.Title" />
+                            <div class="blog-top">
+                                <h4>Mar 30, 2021</h4> @* statik tarix *@
+                                <h2>@item.Title</h2>
+                                <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                    Read This Article >>
+                                </a>
+
+                            </div>
+                            <div class="blog-bottom">
+                                <h3>inspiration</h3> @* statik kateqoriya *@
+                                <div class="social-icons">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                    <i class="fa-brands fa-square-twitter"></i>
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,29 @@
+﻿@model AuthorEditVM
+
+@{
+    ViewData["Title"] = "Edit Author";
+}
+
+<div class="container mt-4">
+    <h2>Edit Author</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label"></label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ImgFile" class="form-label">Upload New Image</label>
+            <input asp-for="ImgFile" type="file" class="form-control" />
+            <span asp-validation-for="ImgFile" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
+

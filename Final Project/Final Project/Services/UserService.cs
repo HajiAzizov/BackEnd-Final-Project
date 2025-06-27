@@ -44,24 +44,5 @@ namespace Final_Project.Services
         {
             return _userManager.Users.ToList();
         }
-
-        // Burada email göndərmə metodu
-        public async Task SendEmailAsync(string email, string subject, string htmlMessage)
-        {
-            var emailMessage = new MimeMessage();
-
-            emailMessage.From.Add(new MailboxAddress("YourAppName", "yourappemail@example.com"));
-            emailMessage.To.Add(new MailboxAddress("", email));
-            emailMessage.Subject = subject;
-
-            var bodyBuilder = new BodyBuilder { HtmlBody = htmlMessage };
-            emailMessage.Body = bodyBuilder.ToMessageBody();
-
-            using var client = new SmtpClient();
-            await client.ConnectAsync("smtp.server.com", 587, false); // SMTP serverini özün yazacaqsan
-            await client.AuthenticateAsync("yourappemail@example.com", "emailpassword"); // Öz mail və şifrən
-            await client.SendAsync(emailMessage);
-            await client.DisconnectAsync(true);
-        }
     }
 }

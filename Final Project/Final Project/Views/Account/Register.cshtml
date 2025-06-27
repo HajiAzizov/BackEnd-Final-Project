@@ -4,33 +4,64 @@
     ViewData["Title"] = "Register";
 }
 
-<h2>Register</h2>
+<main>
+    <section class="hero-2">
+        <h2>Sign Up</h2>
+    </section>
 
-<form asp-action="Register" method="post">
-    <div class="mb-3">
-        <label asp-for="Fullname" class="form-label"></label>
-        <input asp-for="Fullname" class="form-control" />
-        <span asp-validation-for="Fullname" class="text-danger"></span>
-    </div>
+    <section class="py-5 container">
+        <div class="signup-inner">
+            <div class="row g-5 align-items-center g-4">
+                <div class="col-lg-12">
+                    <form asp-action="Register" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input asp-for="Fullname" class="form-control" placeholder="Full Name" />
+                                    <label asp-for="Fullname"></label>
+                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                                </div>
+                            </div>
 
-    <div class="mb-3">
-        <label asp-for="Email" class="form-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                                    <label asp-for="Email"></label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
 
-    <div class="mb-3">
-        <label asp-for="Password" class="form-label"></label>
-        <input asp-for="Password" class="form-control" />
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
+                            <div class="col-md-6 position-relative">
+                                <div class="form-floating">
+                                    <input asp-for="Password" class="form-control" placeholder="Password" />
+                                    <label asp-for="Password"></label>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                    <span class="toggle-password position-absolute top-50 end-0 translate-middle-y me-3" data-target="Password" style="cursor: pointer;">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                            </div>
 
-    <div class="mb-3">
-        <label asp-for="ConfirmPassword" class="form-label"></label>
-        <input asp-for="ConfirmPassword" class="form-control" />
-        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-    </div>
+                            <div class="col-md-6 position-relative">
+                                <div class="form-floating">
+                                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" />
+                                    <label asp-for="ConfirmPassword"></label>
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    <span class="toggle-password position-absolute top-50 end-0 translate-middle-y me-3" data-target="ConfirmPassword" style="cursor: pointer;">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                            </div>
 
-    <button type="submit" class="btn btn-primary">Register</button>
-</form>
-
+                            <div class="col-12">
+                                <button class="btn btn-self by-nw py-3 px-5" type="submit">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

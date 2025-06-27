@@ -34,6 +34,8 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 6;
     options.Password.RequiredUniqueChars = 1;
 
+    options.SignIn.RequireConfirmedEmail = true;
+
     options.User.RequireUniqueEmail = true;
 });
 
@@ -45,6 +47,10 @@ builder.Services.AddScoped<IBestSellingBookService, BestSellingBookService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
 
 
 

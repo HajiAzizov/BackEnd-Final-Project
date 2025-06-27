@@ -48,6 +48,12 @@ namespace Final_Project.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddRole(string userId, string role)
         {
+            if (string.IsNullOrWhiteSpace(role))
+            {
+                TempData["RoleError_" + userId] = "Please select a role.";
+                return RedirectToAction("Index");
+            }
+
             var user = await _userService.GetUserByIdAsync(userId);
             if (user == null) return NotFound();
 
@@ -63,8 +69,10 @@ namespace Final_Project.Areas.Admin.Controllers
             if (success)
                 return RedirectToAction("Index");
 
-            return BadRequest("Rol əlavə edilə bilmədi");
+            TempData["RoleError_" + userId] = "Failed to add role.";
+            return RedirectToAction("Index");
         }
+
 
         [HttpPost]
         public async Task<IActionResult> RemoveRole(string userId, string role)

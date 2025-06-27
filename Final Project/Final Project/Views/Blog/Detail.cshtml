@@ -1,0 +1,19 @@
+﻿@model BlogVM
+
+<main>
+    <section class="hero-2">
+        <h2>@Model.Title</h2>
+    </section>
+
+    <section class="py-5 blog-detail container">
+        <div class="row g-4">
+            <div class="col-lg-12">
+                <img src="~/uploads/blog/@Model.Img" alt="@Model.Title" class="img-fluid" />
+            </div>
+            <div class="col-lg-12">
+                <h2>@Model.Title</h2>
+                <p>@Model.Description</p>
+            </div>
+        </div>
+    </section>
+</main>

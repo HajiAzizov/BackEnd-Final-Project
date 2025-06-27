@@ -1,0 +1,50 @@
+﻿@model ProductVM
+
+@{
+    ViewData["Title"] = "Product Detail";
+}
+
+<div class="container mt-4">
+    <h2>Product Detail</h2>
+
+    <div class="mb-3">
+        <label><strong>Name:</strong></label>
+        <p>@Model.Name</p>
+    </div>
+
+    <div class="mb-3">
+        <label><strong>Price:</strong></label>
+        <p>$@Model.Price</p>
+    </div>
+
+    <div class="mb-3">
+        <label><strong>Image:</strong></label><br />
+        @if (!string.IsNullOrEmpty(Model.Img))
+        {
+            <img src="~/uploads/products/@Model.Img" alt="@Model.Name" style="max-width: 300px; height: auto;" />
+        }
+        else
+        {
+            <p>No image available</p>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label><strong>Authors:</strong></label>
+        @if (Model.Authors != null && Model.Authors.Any())
+        {
+            <ul>
+                @foreach (var author in Model.Authors)
+                {
+                    <li>@author</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No authors assigned.</p>
+        }
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

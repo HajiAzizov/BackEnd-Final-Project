@@ -1,0 +1,22 @@
+﻿@model ContactMessage
+
+@{
+    ViewData["Title"] = "Message Detail";
+}
+
+<div class="container mt-4">
+    <h2>Message Detail</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Full Name:</strong> @Model.FullName</p>
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Subject:</strong> @Model.Subject</p>
+            <p><strong>Message:</strong></p>
+            <div class="border p-3 rounded bg-light">@Model.Message</div>
+            <p class="text-muted mt-2"><strong>Sent At:</strong> @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</p>
+        </div>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>
+</div>

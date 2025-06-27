@@ -45,12 +45,13 @@
 
                             <div class="d-flex align-items-center gap-2">
                                 <select name="role" class="form-select" style="max-width: 200px;">
-                                    <option disabled selected>Choose Roles</option>
+                                    <option value="">Choose Roles</option>
                                     @foreach (var role in allRoles)
                                     {
                                         <option value="@role">@role</option>
                                     }
                                 </select>
+
 
                                 <button type="submit" class="btn btn-success">Add Roles</button>
                             </div>

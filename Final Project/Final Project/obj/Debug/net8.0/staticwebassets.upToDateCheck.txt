@@ -839,6 +839,7 @@ wwwroot\assets\images\client-image2.png
 wwwroot\assets\images\client-image3.png
 wwwroot\assets\images\client-image4.png
 wwwroot\assets\images\client-image5.png
+wwwroot\assets\images\logo.png
 wwwroot\assets\images\main-banner1.jpg
 wwwroot\assets\images\main-banner2.jpg
 wwwroot\assets\images\post-img1.jpg
@@ -861,6 +862,9 @@ wwwroot\uploads\about\8f208d11-6455-4a5f-b57c-ae64d0e8f2bb.jpg
 wwwroot\uploads\about\d59f5e90-8e6b-46c5-898c-4344bf4f9195.avif
 wwwroot\uploads\about\dca41cc9-fdcb-4384-bd59-2a6d72aaf138.avif
 wwwroot\uploads\about\e1095d36-3924-47f3-9d4d-38e4d4801c7c.webp
+wwwroot\uploads\authors\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg
+wwwroot\uploads\authors\be605f3f-d443-4088-86b2-4e225585dd22.jpg
+wwwroot\uploads\blog\7fbdcbc7-78a3-4aa3-8b3f-793e7f58df05.jpg
 wwwroot\uploads\books\0efeff19-3584-44cd-b822-d98473b9a13e.jpg
 wwwroot\uploads\books\4cd9f71c-6c6c-4e2b-be8d-6674fc279527.jpg
 wwwroot\uploads\books\7303637e-851f-4089-855e-9f55b15deb1f.jpg
@@ -874,6 +878,7 @@ wwwroot\uploads\partners\7a8374af-a0cb-42ca-8110-85a1c6406fda.png
 wwwroot\uploads\partners\7fdad7bf-9858-46c6-b51b-e63b6876f22a.png
 wwwroot\uploads\partners\8d49c562-332f-4dee-9fd9-9f4db6f1c973.png
 wwwroot\uploads\partners\c6c21740-37ca-4d35-9bae-dfed7801f6f8.png
+wwwroot\uploads\products\04d05d7c-db8e-4849-a1e6-53c68f2e217e.jpg
 wwwroot\uploads\sliders\89b8547e-4672-4b9c-8bed-becff4f9303e_main-banner2.jpg
 wwwroot\uploads\sliders\90827680-e374-4c28-9417-9bd1665b4848_main-banner1.jpg
 wwwroot\uploads\team\12f2aa64-8fb4-48c3-8701-0d0b5f9f1a60.jpg

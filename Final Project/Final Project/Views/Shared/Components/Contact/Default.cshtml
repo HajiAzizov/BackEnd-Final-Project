@@ -1,0 +1,61 @@
+﻿@model ContactMessageCreateVM
+
+<section class="py-5 container">
+    <div class="contact-inner">
+        <div class="row g-5 align-items-center g-4">
+            <div class="col-lg-6 contact-info">
+                <h2>Contact Info</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est culpa eaque non enim asperiores nobis eum odio dicta alias tempore?
+                </p>
+                <p><b>Address</b>: 351 E International Airport Rd</p>
+                <p><b>Email</b>: hadjiedu@gmail.com</p>
+                <p><b>Phone</b>: +994508812747</p>
+            </div>
+            <div class="col-lg-6">
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success">@TempData["Success"]</div>
+                }
+
+                <form asp-controller="Contact" asp-action="SendMessage" method="post" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="FullName" class="form-control" placeholder="Your Name" />
+                                <label asp-for="FullName">Your Name</label>
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                                <label asp-for="Email">Your Email</label>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input asp-for="Subject" class="form-control" placeholder="Subject" />
+                                <label asp-for="Subject">Subject</label>
+                                <span asp-validation-for="Subject" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea asp-for="Message" class="form-control" placeholder="Leave a message here" style="height: 150px"></textarea>
+                                <label asp-for="Message">Message</label>
+                                <span asp-validation-for="Message" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-self by-nw py-3 px-5" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container my-5" id="map" style="height: 400px;"></section>
+

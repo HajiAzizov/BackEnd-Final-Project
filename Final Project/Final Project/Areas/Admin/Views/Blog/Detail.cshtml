@@ -1,0 +1,19 @@
+﻿@model BlogVM
+
+@{
+    ViewData["Title"] = "Blog Detail";
+}
+
+<div class="container mt-4">
+    <h2>Blog Detail</h2>
+
+    <div class="card mb-4">
+        <img src="~/uploads/blog/@Model.Img" class="card-img-top" alt="@Model.Title" style="max-height: 400px; object-fit: cover;" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-text">@Model.Description</p>
+        </div>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
