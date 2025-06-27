@@ -7,6 +7,9 @@
         public decimal Price { get; set; }
         public string Img { get; set; }
         public List<string> Authors { get; set; }
+        public List<string> Genres { get; set; } = new();
+
+
     }
 
 }

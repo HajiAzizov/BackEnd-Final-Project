@@ -10,7 +10,7 @@ namespace Final_Project.ViewModels.Admin.Product
         public decimal Price { get; set; }
         [Required]
         public IFormFile ImgFile { get; set; }
-
         public List<int> AuthorIds { get; set; } = new List<int>();
+        public List<int> GenreIds { get; set; } = new();
     }
 }

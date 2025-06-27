@@ -1,0 +1,67 @@
+﻿@model SubscribeVM
+
+<section class="newsletter-section">
+    <div class="container container-self">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <h2 class="newsletter-title">Subscribe To Our Newsletter</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="col-md-7">
+                <p class="newsletter-text">
+                    Sed eu feugiat amet, libero ipsum enim pharetra hac dolor sit
+                    amet, consectetur. Elit adipiscing enim pharetra hac.
+                </p>
+                <form id="subscribeForm" method="post" action="/Newsletter/Subscribe" novalidate>
+                    <div class="d-flex align-items-center">
+                        <input type="email" name="Email"
+                               id="subscriberEmail"
+                               class="form-control me-2"
+                               placeholder="Enter your email address here"
+                               required />
+
+                        <button type="submit" class="btn btn-send">
+                            SEND <i class="fas fa-paper-plane ms-1"></i>
+                        </button>
+
+                    </div>
+                </form>
+                <div id="subscribeResult" class="mt-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+               document.getElementById("subscribeForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const emailInput = document.getElementById("subscriberEmail");
+            const resultDiv = document.getElementById("subscribeResult");
+            const email = emailInput.value;
+
+            const response = await fetch("/Newsletter/Subscribe", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email: email })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+
+                let alertClass = 'alert-warning'; // default sarı
+                if (data.message.toLowerCase().includes("already subscribed") || data.message.toLowerCase().includes("confirmed")) {
+                    alertClass = 'alert-success'; // yaşıl
+                }
+
+                resultDiv.innerHTML = `<div class="alert ${alertClass}" role="alert">${data.message}</div>`;
+                emailInput.value = "";
+            } else {
+                resultDiv.innerHTML = `<div class="alert alert-danger">Something went wrong.</div>`;
+            }
+        });
+    </script>
+}

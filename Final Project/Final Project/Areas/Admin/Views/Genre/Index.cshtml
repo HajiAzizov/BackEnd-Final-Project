@@ -1,0 +1,34 @@
+﻿@model List<GenreVM>
+
+@{
+    ViewData["Title"] = "Genres";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Genres</h2>
+        <a asp-action="Create" class="btn btn-success">+ Create Genre</a>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th style="width: 180px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var genre in Model)
+            {
+                <tr>
+                    <td>@genre.Name</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Detail" asp-route-id="@genre.Id">Detail</a>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@genre.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@genre.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

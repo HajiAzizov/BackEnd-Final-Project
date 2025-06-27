@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BlogVM>
+
+<section class="blog py-5">
+    <div class="container container-self">
+        <h4 class="subtitle text-center">Our Blog</h4>
+        <h2 class="title text-center">Read Our Blog</h2>
+        <div class="row">
+            @foreach (var blog in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="blog-item">
+                        <img src="/uploads/blog/@blog.Img" class="img-fluid" alt="@blog.Title" />
+                        <div class="blog-top">
+                            <h4>@blog.CreatedDate.ToString("MMM dd, yyyy")</h4>
+                            <h2>@blog.Title</h2>
+                        </div>
+                        <div class="blog-bottom">
+                            <h3>Reading books always makes the moments happy</h3>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="mt-5 d-flex align-items-center justify-content-center">
+            <a href="/Blog" class="by-nw">
+                Read All Articles
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>

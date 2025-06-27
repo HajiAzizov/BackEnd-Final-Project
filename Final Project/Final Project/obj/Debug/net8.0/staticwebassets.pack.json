@@ -3469,8 +3469,20 @@
       "PackagePath": "staticwebassets\\uploads\\authors\\be605f3f-d443-4088-86b2-4e225585dd22.jpg"
     },
     {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\blog\\34a03ecc-b2c3-4638-accf-62e5f4d5747b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\34a03ecc-b2c3-4638-accf-62e5f4d5747b.jpg"
+    },
+    {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\blog\\7fbdcbc7-78a3-4aa3-8b3f-793e7f58df05.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\7fbdcbc7-78a3-4aa3-8b3f-793e7f58df05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\blog\\c1fa1f38-6f70-481a-b531-97ed8ad02c11.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\c1fa1f38-6f70-481a-b531-97ed8ad02c11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\blog\\f52ff231-cecb-4cac-9f89-7149283a0540.webp",
+      "PackagePath": "staticwebassets\\uploads\\blog\\f52ff231-cecb-4cac-9f89-7149283a0540.webp"
     },
     {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\books\\0efeff19-3584-44cd-b822-d98473b9a13e.jpg",
@@ -3525,8 +3537,12 @@
       "PackagePath": "staticwebassets\\uploads\\partners\\c6c21740-37ca-4d35-9bae-dfed7801f6f8.png"
     },
     {
-      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\04d05d7c-db8e-4849-a1e6-53c68f2e217e.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\04d05d7c-db8e-4849-a1e6-53c68f2e217e.jpg"
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\97ff9ef5-a264-443b-8f65-5fd75b1b19d1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\97ff9ef5-a264-443b-8f65-5fd75b1b19d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\eaaabceb-f528-4bef-b59f-9bab3f0a35fb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\eaaabceb-f528-4bef-b59f-9bab3f0a35fb.jpg"
     },
     {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\sliders\\89b8547e-4672-4b9c-8bed-becff4f9303e_main-banner2.jpg",

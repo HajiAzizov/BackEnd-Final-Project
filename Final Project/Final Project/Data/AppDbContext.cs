@@ -20,6 +20,13 @@ namespace Final_Project.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<ProductAuthor> ProductAuthors { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<ProductGenre> ProductGenres { get; set; }
+        public DbSet<Quote> Quotes { get; set; }
+        public DbSet<Subscriber> Subscribers { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -36,6 +43,22 @@ namespace Final_Project.Data
                 .HasOne(pa => pa.Author)
                 .WithMany(a => a.ProductAuthors)
                 .HasForeignKey(pa => pa.AuthorId);
+
+            modelBuilder.Entity<ProductGenre>()
+       .HasKey(pg => new { pg.ProductId, pg.GenreId });
+
+            modelBuilder.Entity<ProductGenre>()
+                .HasOne(pg => pg.Product)
+                .WithMany(p => p.ProductGenres)
+                .HasForeignKey(pg => pg.ProductId);
+
+            modelBuilder.Entity<ProductGenre>()
+                .HasOne(pg => pg.Genre)
+                .WithMany(g => g.ProductGenres)
+                .HasForeignKey(pg => pg.GenreId);
+
+
+
         }
     }
 }

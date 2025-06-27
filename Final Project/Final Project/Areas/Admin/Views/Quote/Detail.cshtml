@@ -1,0 +1,22 @@
+﻿@model QuoteVM
+
+@{
+    ViewData["Title"] = "Quote Detail";
+}
+
+<div class="container mt-4">
+    <h2>Quote Detail</h2>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Content:</strong></label>
+        <p>@Model.Content</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Author:</strong></label>
+        <p>@Model.Author</p>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning ms-2">Edit</a>
+</div>

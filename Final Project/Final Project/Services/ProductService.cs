@@ -37,6 +37,7 @@ namespace Final_Project.Services
         {
             var product = await _context.Products
                 .Include(p => p.ProductAuthors).ThenInclude(pa => pa.Author)
+                .Include(p => p.ProductGenres).ThenInclude(pg => pg.Genre)  // buranı əlavə et
                 .FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null) throw new Exception("Product not found");
@@ -47,9 +48,11 @@ namespace Final_Project.Services
                 Name = product.Name,
                 Price = product.Price,
                 Img = product.Img,
-                Authors = product.ProductAuthors.Select(x => x.Author.FullName).ToList()
+                Authors = product.ProductAuthors.Select(x => x.Author.FullName).ToList(),
+                Genres = product.ProductGenres.Select(x => x.Genre.Name).ToList() // janrları da əlavə et
             };
         }
+
 
         public async Task CreateAsync(ProductCreateVM model)
         {
@@ -78,6 +81,7 @@ namespace Final_Project.Services
         {
             var product = await _context.Products
                 .Include(p => p.ProductAuthors)
+                .Include(p => p.ProductGenres)  // janrları da yüklə
                 .FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null) throw new Exception("Product not found");
@@ -86,7 +90,6 @@ namespace Final_Project.Services
             {
                 string newFileName = SaveImage(model.ImgFile);
 
-                // köhnə şəkli sil
                 if (!string.IsNullOrEmpty(product.Img))
                 {
                     string oldPath = Path.Combine(_env.WebRootPath, "uploads", "products", product.Img);
@@ -102,7 +105,7 @@ namespace Final_Project.Services
             product.Name = model.Name;
             product.Price = model.Price;
 
-            // müəllifləri yenilə
+            // Müəllifləri yenilə
             product.ProductAuthors.Clear();
             foreach (var authorId in model.AuthorIds)
             {
@@ -112,8 +115,19 @@ namespace Final_Project.Services
                 });
             }
 
+            // Janrları yenilə
+            product.ProductGenres.Clear();
+            foreach (var genreId in model.GenreIds)
+            {
+                product.ProductGenres.Add(new ProductGenre
+                {
+                    GenreId = genreId
+                });
+            }
+
             await _context.SaveChangesAsync();
         }
+
 
         public async Task DeleteAsync(int id)
         {
@@ -149,5 +163,31 @@ namespace Final_Project.Services
 
             return fileName;
         }
+        public async Task<int> GetCountAsync()
+        {
+            return await _context.Products.CountAsync();
+        }
+
+        public async Task<List<ProductVM>> GetPagedAsync(int page, int pageSize)
+        {
+            var products = await _context.Products
+                .Include(p => p.ProductAuthors).ThenInclude(pa => pa.Author)
+                .Include(p => p.ProductGenres).ThenInclude(pg => pg.Genre)
+                .OrderBy(p => p.Id)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return products.Select(p => new ProductVM
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Price = p.Price,
+                Img = p.Img,
+                Authors = p.ProductAuthors.Select(x => x.Author.FullName).ToList(),
+                Genres = p.ProductGenres.Select(x => x.Genre.Name).ToList()
+            }).ToList();
+        }
+
     }
 }

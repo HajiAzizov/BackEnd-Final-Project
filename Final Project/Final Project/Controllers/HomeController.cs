@@ -5,9 +5,9 @@ namespace Final_Project.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int? genreId)
         {
-            return View();
+            return View(genreId);
         }
 
     }

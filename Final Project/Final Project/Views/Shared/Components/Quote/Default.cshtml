@@ -1,0 +1,22 @@
+﻿@model List<QuoteVM>
+
+<section class="container py-5">
+    <h2 class="title text-center">Quote of the day</h2>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            @foreach (var quote in Model)
+            {
+                <div class="swiper-slide">
+                    <div class="quote-item">
+                        <h3>“@quote.Content”</h3>
+                        <h5>@quote.Author</h5>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>

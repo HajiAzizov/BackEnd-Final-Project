@@ -1,0 +1,124 @@
+﻿@model IEnumerable<BasketItemVM>
+
+<main>
+    <section class="py-5 cart-desktop container">
+        <table class="cart-desktop-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Genre</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="cart-item-img">
+                            <img src="/uploads/products/@item.Img" class="img-fluid" alt="@item.ProductName" />
+                        </td>
+                        <td>@item.ProductName</td>
+                        <td>
+                            <div class="input-group" style="max-width: 120px; margin: 0 auto">
+                                <button class="btn btn-outline-secondary btn-sm" type="button" onclick="this.parentNode.querySelector('input.quantity-input').stepDown()">
+                                    -
+                                </button>
+                                <input type="number" class="form-control form-control-sm text-center quantity-input" value="@item.Quantity" min="1" />
+                                <button class="btn btn-outline-secondary btn-sm" type="button" onclick="this.parentNode.querySelector('input.quantity-input').stepUp()">
+                                    +
+                                </button>
+                            </div>
+                        </td>
+                        <td class="product-price">$@item.Price.ToString("F2")</td>
+                        <td>@(item.Genres != null && item.Genres.Any() ? string.Join(", ", item.Genres) : "—")</td>
+                        <td>
+                            <form method="post" asp-controller="Basket" asp-action="Remove" asp-route-productId="@item.ProductId" onsubmit="return confirm('Silmək istədiyinizə əminsiniz?');">
+                                <button type="submit" class="btn btn-link p-0 m-0">
+                                    <i class="fa-solid fa-trash-xmark text-danger"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+
+    <section class="py-5 cart-mobile d-none container">
+        @foreach (var item in Model)
+        {
+            <div class="row g-2 cart-item-mobile">
+                <div class="col-3">
+                    <img src="/uploads/products/@item.Img" class="img-fluid" alt="@item.ProductName" />
+                </div>
+                <div class="col-6">
+                    <h2 class="book-name-mobile">@item.ProductName</h2>
+                    <h3 class="book-category-mobile">@(item.Genres != null && item.Genres.Any() ? string.Join(", ", item.Genres) : "—")</h3>
+                    <h4 class="book-price-mobile">$@item.Price.ToString("F2")</h4>
+                </div>
+                <div class="col-3 cart-mobile-right text-end">
+                    <form method="post" asp-controller="Basket" asp-action="Remove" asp-route-productId="@item.ProductId" onsubmit="return confirm('Silmək istədiyinizə əminsiniz?');" class="mb-2">
+                        <button type="submit" class="btn btn-link p-0 m-0">
+                            <i class="fa-solid fa-trash-xmark text-danger"></i>
+                        </button>
+                    </form>
+                    <div class="input-group" style="max-width: 120px; margin: 0 auto">
+                        <button class="btn btn-outline-secondary btn-sm" type="button" onclick="this.parentNode.querySelector('input.quantity-input').stepDown()">
+                            -
+                        </button>
+                        <input type="number" class="form-control form-control-sm text-center quantity-input" value="@item.Quantity" min="1" />
+                        <button class="btn btn-outline-secondary btn-sm" type="button" onclick="this.parentNode.querySelector('input.quantity-input').stepUp()">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+
+    <section class="container text-end checkout-part py-5">
+        <div class="checkout-inner">
+            <div class="total-pay">
+                <p>TOTAL:</p>
+                <span>$@Model.Sum(i => i.Price * i.Quantity)</span>
+            </div>
+            <div class="total-pay-link">
+                <a href="/Checkout" class="by-nw">
+                    Process To Checkout <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Səbət cəmini yeniləyən funksiya
+    function updateTotal() {
+        let total = 0;
+        document.querySelectorAll('tbody tr').forEach(tr => {
+            const priceText = tr.querySelector('.product-price').textContent.trim();
+            const price = parseFloat(priceText.replace('$', ''));
+            const qtyInput = tr.querySelector('input.quantity-input');
+            const quantity = parseInt(qtyInput.value);
+            if (!isNaN(price) && !isNaN(quantity)) {
+                total += price * quantity;
+            }
+        });
+        document.querySelector('.total-pay span').textContent = '$' + total.toFixed(2);
+    }
+
+    // Quantity input-lara event əlavə edilir
+    document.querySelectorAll('input.quantity-input').forEach(input => {
+        // manual dəyişiklik üçün
+        input.addEventListener('change', updateTotal);
+        // klik ilə artma-azalma üçün
+        input.previousElementSibling.addEventListener('click', updateTotal); // "-" düyməsi
+        input.nextElementSibling.addEventListener('click', updateTotal);     // "+" düyməsi
+    });
+
+    // İlk dəfə page yüklənəndə total düzgün göstərilsin
+    window.onload = updateTotal;
+</script>

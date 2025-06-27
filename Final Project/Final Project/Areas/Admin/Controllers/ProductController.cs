@@ -1,7 +1,11 @@
-﻿using Final_Project.Services.Interfaces;
+﻿using Final_Project.Services;
+using Final_Project.Services.Interfaces;
+using Final_Project.ViewModels.Admin.Author;
+using Final_Project.ViewModels.Admin.Genre;
 using Final_Project.ViewModels.Admin.Product;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project.Areas.Admin.Controllers
 {
@@ -11,19 +15,36 @@ namespace Final_Project.Areas.Admin.Controllers
     {
         private readonly IProductService _productService;
         private readonly IAuthorService _authorService;
-        public ProductController(IProductService productService, IAuthorService authorService)
+        private readonly IGenreService _genreService;
+        public ProductController(IProductService productService, IAuthorService authorService, IGenreService genreService)
         {
             _productService = productService;
             _authorService = authorService;
+            _genreService = genreService;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var products = await _productService.GetAllAsync();
-            return View(products);
+            const int pageSize = 10;
+            var totalCount = await _productService.GetCountAsync();
+            var products = await _productService.GetPagedAsync(page, pageSize);
+
+            var model = new ProductListVM
+            {
+                Products = products,
+                CurrentPage = page,
+                TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            };
+
+            return View(model);
         }
         public async Task<IActionResult> Create()
         {
-            ViewBag.Authors = await _authorService.GetAllAsync();
+            var authors = await _authorService.GetAllAsync() ?? new List<AuthorVM>();
+            var genres = await _genreService.GetAllAsync() ?? new List<GenreVM>();
+
+            ViewBag.Authors = authors;
+            ViewBag.Genres = genres;
+
             return View();
         }
 
@@ -45,23 +66,25 @@ namespace Final_Project.Areas.Admin.Controllers
             var product = await _productService.GetByIdAsync(id);
             if (product == null) return NotFound();
 
-            var productDb = await _productService.GetByIdAsync(id);
+            var authors = await _authorService.GetAllAsync();
+            var genres = await _genreService.GetAllAsync();
 
             var editVM = new ProductEditVM
             {
-                Id = productDb.Id,
-                Name = productDb.Name,
-                Price = productDb.Price,
-                AuthorIds = productDb.Authors != null
-                    ? (await _authorService.GetAllAsync())
-                        .Where(a => productDb.Authors.Contains(a.FullName))
-                        .Select(a => a.Id).ToList()
-                    : new List<int>()
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                AuthorIds = authors.Where(a => product.Authors.Contains(a.FullName)).Select(a => a.Id).ToList(),
+                GenreIds = genres.Where(g => product.Genres.Contains(g.Name)).Select(g => g.Id).ToList()  // janr Id-lərini seçirik
             };
 
-            ViewBag.Authors = await _authorService.GetAllAsync();
+            ViewBag.Authors = authors;
+            ViewBag.Genres = genres;
+
             return View(editVM);
         }
+
+
 
         [HttpPost]
         public async Task<IActionResult> Edit(int id, ProductEditVM model)

@@ -137,6 +137,56 @@ namespace Final_Project.Migrations
                     b.ToTable("Authors");
                 });
 
+            modelBuilder.Entity("Final_Project.Models.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BasketItems");
+                });
+
             modelBuilder.Entity("Final_Project.Models.BestSellingBook", b =>
                 {
                     b.Property<int>("Id")
@@ -249,6 +299,25 @@ namespace Final_Project.Migrations
                     b.ToTable("FeaturedBooks");
                 });
 
+            modelBuilder.Entity("Final_Project.Models.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genres");
+                });
+
             modelBuilder.Entity("Final_Project.Models.Partner", b =>
                 {
                     b.Property<int>("Id")
@@ -308,6 +377,43 @@ namespace Final_Project.Migrations
                     b.ToTable("ProductAuthors");
                 });
 
+            modelBuilder.Entity("Final_Project.Models.ProductGenre", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "GenreId");
+
+                    b.HasIndex("GenreId");
+
+                    b.ToTable("ProductGenres");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.Quote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Quotes");
+                });
+
             modelBuilder.Entity("Final_Project.Models.Setting", b =>
                 {
                     b.Property<int>("Id")
@@ -353,6 +459,31 @@ namespace Final_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.Subscriber", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConfirmationToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscribers");
                 });
 
             modelBuilder.Entity("Final_Project.Models.Team", b =>
@@ -513,6 +644,34 @@ namespace Final_Project.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Final_Project.Models.Basket", b =>
+                {
+                    b.HasOne("Final_Project.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.BasketItem", b =>
+                {
+                    b.HasOne("Final_Project.Models.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Final_Project.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Final_Project.Models.ProductAuthor", b =>
                 {
                     b.HasOne("Final_Project.Models.Author", "Author")
@@ -528,6 +687,25 @@ namespace Final_Project.Migrations
                         .IsRequired();
 
                     b.Navigation("Author");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.ProductGenre", b =>
+                {
+                    b.HasOne("Final_Project.Models.Genre", "Genre")
+                        .WithMany("ProductGenres")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Final_Project.Models.Product", "Product")
+                        .WithMany("ProductGenres")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
 
                     b.Navigation("Product");
                 });
@@ -588,9 +766,21 @@ namespace Final_Project.Migrations
                     b.Navigation("ProductAuthors");
                 });
 
+            modelBuilder.Entity("Final_Project.Models.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.Genre", b =>
+                {
+                    b.Navigation("ProductGenres");
+                });
+
             modelBuilder.Entity("Final_Project.Models.Product", b =>
                 {
                     b.Navigation("ProductAuthors");
+
+                    b.Navigation("ProductGenres");
                 });
 #pragma warning restore 612, 618
         }

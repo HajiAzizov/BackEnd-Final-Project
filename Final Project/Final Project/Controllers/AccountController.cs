@@ -59,7 +59,7 @@ namespace Final_Project.Controllers
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("hadjiedu@gmail.com"));
             email.To.Add(MailboxAddress.Parse(newUser.Email));
-            email.Subject = "Test Email Subject";
+            email.Subject = "Register Confirmation";
             string html = $"<a href='{url}'>Click Here For Confirmation</a>";
             email.Body = new TextPart(TextFormat.Html) { Text = html };
 

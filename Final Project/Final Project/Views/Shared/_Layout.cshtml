@@ -80,7 +80,7 @@
             <a href="wishlist.html"> <i class="fa-regular fa-heart"></i> Wishlist</a>
           </div>
           <div class="top-nav-item">
-            <a href="cart.html">
+                    <a class="navbar-brand" asp-controller="Basket" asp-action="Index">
               <i class="fa-regular fa-cart-shopping"></i>
 
               Cart
@@ -136,7 +136,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="products.html">Products</a>
+                    <a class="nav-link" asp-controller="Product" asp-action="Index">Products</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="authors.html">Authors</a>
@@ -210,6 +210,8 @@
     </script> -->
 
     <script src="~/assets/js/main.js"></script>
-
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+

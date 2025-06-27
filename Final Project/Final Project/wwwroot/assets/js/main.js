@@ -124,4 +124,7 @@ document.querySelectorAll('.toggle-password').forEach(toggle => {
   rangeMax.addEventListener('input', updateRange);
 
   // Initialize values
-  updateRange();
+updateRange();
+
+
+

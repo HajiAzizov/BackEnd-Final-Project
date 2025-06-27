@@ -1,0 +1,31 @@
+﻿@model PopularBooksVM
+
+<section class="featured-books">
+    <h4 class="subtitle">Some Quality Items</h4>
+    <h2 class="title">Popular Books</h2>
+
+    <ul class="category-list">
+        <li class="active">All Genre</li>
+        @foreach (var genre in Model.Genres)
+        {
+            <li>@genre.Name</li>
+        }
+    </ul>
+
+    <div class="book-container">
+        @foreach (var product in Model.Products)
+        {
+            <div class="book-card">
+                <div class="image-container">
+                    <img src="~/uploads/products/@product.Img" alt="@product.Name" />
+                    <div class="overlay">
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                    </div>
+                </div>
+                <h3>@product.Name</h3>
+                <p class="author">@string.Join(", ", product.Authors)</p>
+                <p class="price">$@product.Price</p>
+            </div>
+        }
+    </div>
+</section>

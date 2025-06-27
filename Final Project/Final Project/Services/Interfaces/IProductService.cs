@@ -9,5 +9,9 @@ namespace Final_Project.Services.Interfaces
         Task CreateAsync(ProductCreateVM model);
         Task EditAsync(int id, ProductEditVM model);
         Task DeleteAsync(int id);
+        Task<int> GetCountAsync();
+        Task<List<ProductVM>> GetPagedAsync(int page, int pageSize);
+
+
     }
 }

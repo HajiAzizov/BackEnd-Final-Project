@@ -45,6 +45,7 @@ namespace Final_Project.Services
                     Title = b.Title,
                     Description = b.Description,
                     Img = b.Img
+
                 }).ToListAsync();
         }
 

@@ -46,5 +46,22 @@
         }
     </div>
 
+    <div class="mb-3">
+        <label><strong>Genres:</strong></label>
+        @if (Model.Genres != null && Model.Genres.Any())
+        {
+            <ul>
+                @foreach (var genre in Model.Genres)
+                {
+                    <li>@genre</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No genres assigned.</p>
+        }
+    </div>
+
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>

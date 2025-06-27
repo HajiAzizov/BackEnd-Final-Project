@@ -51,6 +51,9 @@ builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<IQuoteService, QuoteService>();
+builder.Services.AddScoped<IBasketService, BasketService>();
 
 
 
@@ -74,6 +77,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 
 app.UseAuthentication();
 app.UseAuthorization();
