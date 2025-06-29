@@ -1,4 +1,6 @@
-﻿namespace Final_Project.ViewModels.Admin.Product
+﻿using Final_Project.Models;
+
+namespace Final_Project.ViewModels.Admin.Product
 {
     public class ProductVM
     {
@@ -8,7 +10,8 @@
         public string Img { get; set; }
         public List<string> Authors { get; set; }
         public List<string> Genres { get; set; } = new();
-
+        public List<int> GenreIds { get; set; } = new();
+        public List<int> AuthorIds { get; set; } = new();
 
     }
 

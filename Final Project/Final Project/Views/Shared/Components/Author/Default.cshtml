@@ -1,0 +1,21 @@
+﻿@model List<AuthorVM>
+
+<main>
+    <section class="hero-2">
+        <h2>Authors</h2>
+    </section>
+
+    <section class="container py-5">
+        <div class="owl-carousel owl-theme">
+            @foreach (var author in Model)
+            {
+                <div class="item">
+                    <div class="carousel-item-content position-relative">
+                        <img src="/uploads/authors/@author.Img" />
+                        <div class="overlay-self-2">@author.FullName</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+</main>

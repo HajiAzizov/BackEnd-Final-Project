@@ -2,6 +2,7 @@
 using Final_Project.Models;
 using Final_Project.Services.Interfaces;
 using Final_Project.ViewModels.Admin.Product;
+using Final_Project.ViewModels.User.UIProduct;
 using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project.Services
@@ -187,6 +188,60 @@ namespace Final_Project.Services
                 Authors = p.ProductAuthors.Select(x => x.Author.FullName).ToList(),
                 Genres = p.ProductGenres.Select(x => x.Genre.Name).ToList()
             }).ToList();
+        }
+        //public async Task<List<ProductSearchVM>> LiveSearchAsync(string? query)
+        //{
+        //    IQueryable<Product> products = _context.Products
+        //        .Include(p => p.ProductAuthors)
+        //            .ThenInclude(pa => pa.Author);
+
+        //    if (!string.IsNullOrWhiteSpace(query))
+        //    {
+        //        var loweredQuery = query.ToLower();
+        //        products = products.Where(p =>
+        //            p.Name.ToLower().Contains(loweredQuery) ||
+        //            p.ProductAuthors.Any(pa => pa.Author.FullName.ToLower().Contains(loweredQuery)));
+        //    }
+
+        //    return await products.Select(p => new ProductSearchVM
+        //    {
+        //        Id = p.Id,
+        //        Name = p.Name,
+        //        Img = p.Img,
+        //        Price = p.Price,
+        //        Authors = p.ProductAuthors.Select(pa => pa.Author.FullName).ToList()
+        //    }).ToListAsync();
+        //}
+
+
+        public async Task<List<ProductSearchVM>> LiveSearchAsync(string? query)
+        {
+            IQueryable<Product> products = _context.Products
+                .Include(p => p.ProductAuthors)
+                    .ThenInclude(pa => pa.Author);
+
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                var loweredQuery = query.ToLower();
+                products = products.Where(p =>
+                    p.Name.ToLower().Contains(loweredQuery) ||
+                    p.ProductAuthors.Any(pa => pa.Author.FullName.ToLower().Contains(loweredQuery)));
+            }
+
+            var result = await products
+                .Select(p => new ProductSearchVM
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Img = p.Img,
+                    Price = p.Price,
+                    Authors = p.ProductAuthors
+                                .Select(pa => pa.Author.FullName)
+                                .ToList()
+                })
+                .ToListAsync();
+
+            return result;
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using Final_Project.ViewModels.Admin.Product;
+using Final_Project.ViewModels.User.UIProduct;
 
 namespace Final_Project.Services.Interfaces
 {
@@ -11,6 +12,7 @@ namespace Final_Project.Services.Interfaces
         Task DeleteAsync(int id);
         Task<int> GetCountAsync();
         Task<List<ProductVM>> GetPagedAsync(int page, int pageSize);
+        Task<List<ProductSearchVM>> LiveSearchAsync(string query);
 
 
     }

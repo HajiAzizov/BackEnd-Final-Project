@@ -3425,6 +3425,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
     {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\assets\\js\\product.js",
+      "PackagePath": "staticwebassets\\assets\\js\\product.js"
+    },
+    {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\about\\156c3363-511f-4fff-84b2-82053a1db7ef.jpg",
       "PackagePath": "staticwebassets\\uploads\\about\\156c3363-511f-4fff-84b2-82053a1db7ef.jpg"
     },
@@ -3461,12 +3465,28 @@
       "PackagePath": "staticwebassets\\uploads\\about\\e1095d36-3924-47f3-9d4d-38e4d4801c7c.webp"
     },
     {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg",
+      "PackagePath": "staticwebassets\\uploads\\authors\\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg"
+    },
+    {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg",
       "PackagePath": "staticwebassets\\uploads\\authors\\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg"
     },
     {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png",
+      "PackagePath": "staticwebassets\\uploads\\authors\\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png"
+    },
+    {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\be605f3f-d443-4088-86b2-4e225585dd22.jpg",
       "PackagePath": "staticwebassets\\uploads\\authors\\be605f3f-d443-4088-86b2-4e225585dd22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\de3bc93c-e233-415b-a144-11a9ea14209d.webp",
+      "PackagePath": "staticwebassets\\uploads\\authors\\de3bc93c-e233-415b-a144-11a9ea14209d.webp"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg",
+      "PackagePath": "staticwebassets\\uploads\\authors\\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg"
     },
     {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\blog\\34a03ecc-b2c3-4638-accf-62e5f4d5747b.jpg",
@@ -3535,6 +3555,18 @@
     {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\partners\\c6c21740-37ca-4d35-9bae-dfed7801f6f8.png",
       "PackagePath": "staticwebassets\\uploads\\partners\\c6c21740-37ca-4d35-9bae-dfed7801f6f8.png"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp",
+      "PackagePath": "staticwebassets\\uploads\\products\\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp"
+    },
+    {
+      "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\9635c881-4cfb-45a5-b983-ab576acba281.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\9635c881-4cfb-45a5-b983-ab576acba281.jpg"
     },
     {
       "Id": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\97ff9ef5-a264-443b-8f65-5fd75b1b19d1.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "shHPVenNPVgB8Gy9i/MNAJ9onGOEPRke2Z5+8K0p3sA=",
+  "Hash": "XESx21yrzECHYmN3GLcX1tV1hmk/4rLAlvDMUQlXqeY=",
   "Source": "Final Project",
   "BasePath": "_content/Final Project",
   "Mode": "Default",
@@ -18014,6 +18014,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\main.js"
     },
     {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\assets\\js\\product.js",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "assets/js/product#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7963ygg6s0",
+      "Integrity": "a2RWnGRAniJmJwnJiOwyjuSsBtQ6KR0Ws41zJPxyZJQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\product.js"
+    },
+    {
       "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\about\\156c3363-511f-4fff-84b2-82053a1db7ef.jpg",
       "SourceId": "Final Project",
       "SourceType": "Discovered",
@@ -18203,6 +18224,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\about\\e1095d36-3924-47f3-9d4d-38e4d4801c7c.webp"
     },
     {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/authors/09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hk60n04r3o",
+      "Integrity": "QZjtZ1zH87ICDoVkKjRily1CmozFQ4uRdqV14xI1oAk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\authors\\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg",
       "SourceId": "Final Project",
       "SourceType": "Discovered",
@@ -18224,6 +18266,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\authors\\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg"
     },
     {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/authors/ad6dbeb4-fa19-4015-931c-c282bb4a4996#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zr3vz5lphy",
+      "Integrity": "IRSa5s6nJVCGTXvjseUpt7O3h6jIgzZq3MoABgz8D2k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\authors\\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png"
+    },
+    {
       "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\be605f3f-d443-4088-86b2-4e225585dd22.jpg",
       "SourceId": "Final Project",
       "SourceType": "Discovered",
@@ -18243,6 +18306,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\authors\\be605f3f-d443-4088-86b2-4e225585dd22.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\de3bc93c-e233-415b-a144-11a9ea14209d.webp",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/authors/de3bc93c-e233-415b-a144-11a9ea14209d#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "twsavzm20z",
+      "Integrity": "I4TFjkz15Wb7XoyKWsH63sftx6HDqpoDxIHzGMRIgFc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\authors\\de3bc93c-e233-415b-a144-11a9ea14209d.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/authors/fb89f772-9b60-4f9c-a4d7-2a2059a00d27#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jm68u0bs79",
+      "Integrity": "dZ75/aHk1T7LrNlnlOZO6y203x/e3y9sfOSp2T/OAVw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\authors\\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg"
     },
     {
       "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\blog\\34a03ecc-b2c3-4638-accf-62e5f4d5747b.jpg",
@@ -18600,6 +18705,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\partners\\c6c21740-37ca-4d35-9bae-dfed7801f6f8.png"
+    },
+    {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/products/25830136-0017-46b0-9f19-e64f8bc2d2ce#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f0bybpwop2",
+      "Integrity": "P1tVZa/TotsqEHPKjphufXVyNe/g67vA3UEDOTUOAm0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/products/5317202e-1912-46c0-9b00-5c3f06b2cefc#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ife4dltzxk",
+      "Integrity": "DlO4h6scXxcXB7LAgsBY33eUo3i61PJ8xOPOkP6NpmA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\9635c881-4cfb-45a5-b983-ab576acba281.jpg",
+      "SourceId": "Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\",
+      "BasePath": "_content/Final Project",
+      "RelativePath": "uploads/products/9635c881-4cfb-45a5-b983-ab576acba281#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "levza6o78s",
+      "Integrity": "QxQhAdMMr+vDy4ZOOaQZL6GShVTS3m9tPBVqEo0HFis=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\9635c881-4cfb-45a5-b983-ab576acba281.jpg"
     },
     {
       "Identity": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\97ff9ef5-a264-443b-8f65-5fd75b1b19d1.jpg",
@@ -88882,6 +89050,88 @@
       ]
     },
     {
+      "Route": "assets/js/product.7963ygg6s0.js",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\assets\\js\\product.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a2RWnGRAniJmJwnJiOwyjuSsBtQ6KR0Ws41zJPxyZJQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 15:15:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7963ygg6s0"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/product.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-a2RWnGRAniJmJwnJiOwyjuSsBtQ6KR0Ws41zJPxyZJQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/product.js",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\assets\\js\\product.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a2RWnGRAniJmJwnJiOwyjuSsBtQ6KR0Ws41zJPxyZJQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 15:15:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-a2RWnGRAniJmJwnJiOwyjuSsBtQ6KR0Ws41zJPxyZJQ="
+        }
+      ]
+    },
+    {
       "Route": "Final Project.bundle.scp.css",
       "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Final Project.bundle.scp.css",
       "Selectors": [],
@@ -89784,6 +90034,88 @@
       ]
     },
     {
+      "Route": "uploads/authors/09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.hk60n04r3o.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6218"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QZjtZ1zH87ICDoVkKjRily1CmozFQ4uRdqV14xI1oAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:50:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hk60n04r3o"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/authors/09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QZjtZ1zH87ICDoVkKjRily1CmozFQ4uRdqV14xI1oAk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/authors/09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6218"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QZjtZ1zH87ICDoVkKjRily1CmozFQ4uRdqV14xI1oAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:50:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QZjtZ1zH87ICDoVkKjRily1CmozFQ4uRdqV14xI1oAk="
+        }
+      ]
+    },
+    {
       "Route": "uploads/authors/401431d1-eb8d-47c5-a793-13c9fc8caf07.dvelq9cqy9.jpg",
       "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg",
       "Selectors": [],
@@ -89866,6 +90198,88 @@
       ]
     },
     {
+      "Route": "uploads/authors/ad6dbeb4-fa19-4015-931c-c282bb4a4996.png",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IRSa5s6nJVCGTXvjseUpt7O3h6jIgzZq3MoABgz8D2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:53:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IRSa5s6nJVCGTXvjseUpt7O3h6jIgzZq3MoABgz8D2k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/authors/ad6dbeb4-fa19-4015-931c-c282bb4a4996.zr3vz5lphy.png",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IRSa5s6nJVCGTXvjseUpt7O3h6jIgzZq3MoABgz8D2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:53:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zr3vz5lphy"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/authors/ad6dbeb4-fa19-4015-931c-c282bb4a4996.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IRSa5s6nJVCGTXvjseUpt7O3h6jIgzZq3MoABgz8D2k="
+        }
+      ]
+    },
+    {
       "Route": "uploads/authors/be605f3f-d443-4088-86b2-4e225585dd22.evvjjf8o4f.jpg",
       "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\be605f3f-d443-4088-86b2-4e225585dd22.jpg",
       "Selectors": [],
@@ -89944,6 +90358,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-GjdTFw83i0dO2pzeEHXk3VTUGoVPMyCscBWT4rEzHjI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/authors/de3bc93c-e233-415b-a144-11a9ea14209d.twsavzm20z.webp",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\de3bc93c-e233-415b-a144-11a9ea14209d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104076"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I4TFjkz15Wb7XoyKWsH63sftx6HDqpoDxIHzGMRIgFc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:26:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "twsavzm20z"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/authors/de3bc93c-e233-415b-a144-11a9ea14209d.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I4TFjkz15Wb7XoyKWsH63sftx6HDqpoDxIHzGMRIgFc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/authors/de3bc93c-e233-415b-a144-11a9ea14209d.webp",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\de3bc93c-e233-415b-a144-11a9ea14209d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104076"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I4TFjkz15Wb7XoyKWsH63sftx6HDqpoDxIHzGMRIgFc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:26:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I4TFjkz15Wb7XoyKWsH63sftx6HDqpoDxIHzGMRIgFc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/authors/fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jm68u0bs79.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "618098"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dZ75/aHk1T7LrNlnlOZO6y203x/e3y9sfOSp2T/OAVw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:52:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jm68u0bs79"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/authors/fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dZ75/aHk1T7LrNlnlOZO6y203x/e3y9sfOSp2T/OAVw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/authors/fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\authors\\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "618098"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dZ75/aHk1T7LrNlnlOZO6y203x/e3y9sfOSp2T/OAVw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:52:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dZ75/aHk1T7LrNlnlOZO6y203x/e3y9sfOSp2T/OAVw="
         }
       ]
     },
@@ -91338,6 +91916,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-/STsX+g9ivuv/UjTV/Gx2tHwHo3YOkTcuQxPljCmgy8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/25830136-0017-46b0-9f19-e64f8bc2d2ce.f0bybpwop2.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P1tVZa/TotsqEHPKjphufXVyNe/g67vA3UEDOTUOAm0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:26:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f0bybpwop2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/products/25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P1tVZa/TotsqEHPKjphufXVyNe/g67vA3UEDOTUOAm0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P1tVZa/TotsqEHPKjphufXVyNe/g67vA3UEDOTUOAm0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:26:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-P1tVZa/TotsqEHPKjphufXVyNe/g67vA3UEDOTUOAm0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/5317202e-1912-46c0-9b00-5c3f06b2cefc.ife4dltzxk.webp",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DlO4h6scXxcXB7LAgsBY33eUo3i61PJ8xOPOkP6NpmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:54:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ife4dltzxk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/products/5317202e-1912-46c0-9b00-5c3f06b2cefc.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DlO4h6scXxcXB7LAgsBY33eUo3i61PJ8xOPOkP6NpmA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/5317202e-1912-46c0-9b00-5c3f06b2cefc.webp",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DlO4h6scXxcXB7LAgsBY33eUo3i61PJ8xOPOkP6NpmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:54:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DlO4h6scXxcXB7LAgsBY33eUo3i61PJ8xOPOkP6NpmA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/9635c881-4cfb-45a5-b983-ab576acba281.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\9635c881-4cfb-45a5-b983-ab576acba281.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49953"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QxQhAdMMr+vDy4ZOOaQZL6GShVTS3m9tPBVqEo0HFis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:55:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QxQhAdMMr+vDy4ZOOaQZL6GShVTS3m9tPBVqEo0HFis="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/9635c881-4cfb-45a5-b983-ab576acba281.levza6o78s.jpg",
+      "AssetFile": "C:\\Users\\Haji\\Desktop\\Final Project\\Final Project\\Final Project\\wwwroot\\uploads\\products\\9635c881-4cfb-45a5-b983-ab576acba281.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49953"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QxQhAdMMr+vDy4ZOOaQZL6GShVTS3m9tPBVqEo0HFis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 11:55:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "levza6o78s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/products/9635c881-4cfb-45a5-b983-ab576acba281.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QxQhAdMMr+vDy4ZOOaQZL6GShVTS3m9tPBVqEo0HFis="
         }
       ]
     },

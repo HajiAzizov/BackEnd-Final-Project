@@ -26,6 +26,8 @@ namespace Final_Project.Data
         public DbSet<Subscriber> Subscribers { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<WishlistItem> WishlistItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -57,7 +59,9 @@ namespace Final_Project.Data
                 .WithMany(g => g.ProductGenres)
                 .HasForeignKey(pg => pg.GenreId);
 
-
+             modelBuilder.Entity<WishlistItem>()
+            .HasIndex(x => new { x.WishlistId, x.ProductId })
+            .IsUnique();
 
         }
     }

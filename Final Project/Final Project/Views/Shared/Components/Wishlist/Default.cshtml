@@ -1,0 +1,90 @@
+﻿@model List<WishlistVM>
+
+<main>
+    <section class="hero-2">
+        <h2>Wishlist</h2>
+    </section>
+    <section class="py-5 cart-desktop container">
+        <table class="cart-desktop-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Add To Cart</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr><td colspan="5" class="text-center">Wishlist is empty</td></tr>
+                }
+                else
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="cart-item-img">
+                                <img src="~/uploads/products/@item.ProductImage" class="img-fluid" alt="@item.ProductName" />
+                            </td>
+                            <td>@item.ProductName</td>
+                            <td>@item.Price.ToString("C")</td>
+                            <td>
+                                <form asp-controller="Basket" asp-action="Add" method="post">
+                                    <input type="hidden" name="productId" value="@item.ProductId" />
+                                    <button type="submit" class="by-nw">Add To Cart</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form asp-controller="Wishlist" asp-action="Remove" method="post">
+                                    <input type="hidden" name="productId" value="@item.ProductId" />
+                                    <button type="submit" class="btn btn-link p-0">
+                                        <i class="fa-solid fa-trash-xmark"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </section>
+
+    <section class="py-5 cart-mobile d-none container">
+        @if (!Model.Any())
+        {
+            <div class="text-center">Wishlist is empty</div>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <div class="row g-2 cart-item-mobile">
+                    <div class="col-3">
+                        <img src="~/uploads/products/@item.ProductImage" class="img-fluid" alt="@item.ProductName" />
+                    </div>
+                    <div class="col-4">
+                        <h2 class="book-name-mobile">@item.ProductName</h2>
+                        <h4 class="book-price-mobile">@item.Price.ToString("C")</h4>
+                    </div>
+                    <div class="col-5 cart-mobile-right text-end">
+                        <form asp-controller="Wishlist" asp-action="Remove" method="post" class="d-inline">
+                            <input type="hidden" name="productId" value="@item.ProductId" />
+                            <button type="submit" class="mobile-delete-btn">
+                                <i class="fa-solid fa-trash-xmark"></i>
+                            </button>
+                        </form>
+                        <form asp-controller="Basket" asp-action="Add" method="post" class="d-inline ms-2" style="display:inline;">
+                            <input type="hidden" name="productId" value="@item.ProductId" />
+                            <button type="submit" style="border:none; background:none; padding:0; cursor:pointer;" title="Add to Cart">
+                                <i class="fa-regular fa-cart-plus" style="font-size:1.3rem; color:#000;"></i>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            }
+        }
+    </section>
+</main>

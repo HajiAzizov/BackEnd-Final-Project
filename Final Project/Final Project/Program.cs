@@ -4,6 +4,8 @@ using Final_Project.Services.Interfaces;
 using Final_Project.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Final_Project;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +41,14 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.RequireUniqueEmail = true;
 });
 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    // .WriteTo.Seq("http://localhost:5341") 
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
 
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IPartnerService, PartnerService>();
@@ -54,9 +64,10 @@ builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IQuoteService, QuoteService>();
 builder.Services.AddScoped<IBasketService, BasketService>();
+builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 
-
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -65,15 +76,18 @@ using (var scope = app.Services.CreateScope())
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     await DbInitializer.SeedRoles(roleManager);
 }
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
+app.UseMiddleware<GlobalExceptionHandler>();
 app.UseStaticFiles();
 
 app.UseRouting();

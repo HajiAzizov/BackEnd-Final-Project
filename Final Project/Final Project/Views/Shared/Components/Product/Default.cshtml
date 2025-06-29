@@ -1,91 +1,73 @@
-﻿@model IEnumerable<ProductVM>
+﻿@model UIProductVM
 
 <section class="container py-5 products-main">
     <div class="row g-4">
+        <!-- LEFT SIDEBAR -->
         <div class="col-lg-3">
             <div class="filter-sidebar p-3 bg-white rounded shadow-sm">
                 <h5 class="mb-3">FILTER BY</h5>
                 <hr />
 
-                <!-- Categories -->
+                <!-- Search -->
+                <div class="mb-4 position-relative">
+                    <h6 class="fw-bold mb-2">Search</h6>
+                    <div class="input-group">
+                        <input type="text" id="liveSearchInput" class="form-control" placeholder="Search by name..." autocomplete="off" />
+                        <button id="searchBtn" class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Genres -->
                 <div class="mb-4">
                     <h6 class="fw-bold mb-2">Genres</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="cat1" />
-                        <label class="form-check-label" for="cat1">Headphones (7)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="cat2" />
-                        <label class="form-check-label" for="cat2">Accessories (13)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="cat3" />
-                        <label class="form-check-label" for="cat3">Gaming controllers (6)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="cat4" />
-                        <label class="form-check-label" for="cat4">Gaming Mouse (10)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="cat5" />
-                        <label class="form-check-label" for="cat5">Keyboards (9)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="cat6" />
-                        <label class="form-check-label" for="cat6">Wireless headset (5)</label>
-                    </div>
+                    @foreach (var item in Model.Genres)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input filter-genre" type="checkbox" id="genre_@item.Id" value="@item.Id" />
+                            <label class="form-check-label" for="genre_@item.Id">@item.Name</label>
+                        </div>
+                    }
                 </div>
 
                 <!-- Price -->
                 <div class="mb-4">
                     <h6 class="fw-bold mb-2">Price</h6>
-                    <div class="range-slider">
-                        <input type="range" class="form-range" id="rangeMin" min="0" max="90" value="0" />
-                        <input type="range" class="form-range" id="rangeMax" min="0" max="90" value="90" />
+                    <div class="range-slider d-flex align-items-center">
+                        <input type="number" class="form-control me-2" id="priceMin" min="0" max="100000" value="0" style="width: 80px;" />
+                        <span>-</span>
+                        <input type="number" class="form-control ms-2" id="priceMax" min="0" max="100000" value="100000" style="width: 80px;" />
                     </div>
-                    <div class="d-flex justify-content-between small">
-                        <span id="rangeMinVal">$0</span>
-                        <span id="rangeMaxVal">$90</span>
-                    </div>
-                    <button class="btn btn-dark btn-sm mt-2 w-100">Filter</button>
+                    <button id="filterPriceBtn" class="btn btn-dark btn-sm mt-2 w-100">Filter</button>
                 </div>
 
-                <!-- Brands -->
+                <!-- Authors -->
                 <div>
-                    <h6 class="fw-bold mb-2">Brands</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="brand1" />
-                        <label class="form-check-label" for="brand1">Akko (4)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="brand2" />
-                        <label class="form-check-label" for="brand2">Apple (6)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="brand3" />
-                        <label class="form-check-label" for="brand3">Logitech (7)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="brand4" />
-                        <label class="form-check-label" for="brand4">Rapoo (6)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="brand5" />
-                        <label class="form-check-label" for="brand5">Razer (9)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="brand6" />
-                        <label class="form-check-label" for="brand6">Sony (8)</label>
-                    </div>
+                    <h6 class="fw-bold mb-2">Authors</h6>
+                    @foreach (var item in Model.Authors)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input filter-author" type="checkbox" id="author_@item.Id" value="@item.Id" />
+                            <label class="form-check-label" for="author_@item.Id">@item.FullName</label>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
 
+        <!-- RIGHT PRODUCTS -->
         <div class="col-lg-9">
-            <div class="row g-4">
-                @foreach (var product in Model)
+            <div class="row g-4" id="productsContainer">
+                @for (int i = 0; i < Model.Products.Count; i++)
                 {
-                    <div class="col-lg-4">
+                    var product = Model.Products[i];
+                    var hiddenClass = i < 3 ? "" : "d-none more-product";
+
+                    <div class="col-lg-4 @hiddenClass"
+                         data-genres="@string.Join(',', product.GenreIds ?? new List<int>())"
+                         data-authors="@string.Join(',', product.AuthorIds ?? new List<int>())"
+                         data-price="@product.Price">
                         <div class="product-main-item">
                             <img src="/uploads/products/@product.Img" alt="@product.Name" />
                             <h2>@product.Name</h2>
@@ -95,19 +77,23 @@
                                    onclick="location.href='@Url.Action("Add", "Basket", new { productId = product.Id })'">
                                 </i>
                                 <h3>$@product.Price.ToString("F2")</h3>
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart" style="cursor:pointer;"
+                                   onclick="location.href='@Url.Action("Add", "Wishlist", new { productId = product.Id })'"
+                                   title="Add to Wishlist"></i>
                             </div>
                         </div>
                     </div>
                 }
             </div>
 
-            <section class="text-center py-3">
-                <a href="/Product" class="by-nw">
-                    Show More
-                    <i class="fa-solid fa-arrow-down"></i>
-                </a>
-            </section>
+            @if (Model.Products.Count > 3)
+            {
+                <section class="text-center py-3">
+                    <button id="showMoreBtn" class="btn btn-outline-dark px-4">
+                        Show More <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+                </section>
+            }
         </div>
     </div>
 </section>

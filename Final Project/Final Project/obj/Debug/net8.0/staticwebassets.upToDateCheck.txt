@@ -853,6 +853,7 @@ wwwroot\assets\images\single-image.jpg
 wwwroot\assets\images\WhatsApp Image 2025-05-29 at 19.07.16.jpeg
 wwwroot\assets\js\fa.js
 wwwroot\assets\js\main.js
+wwwroot\assets\js\product.js
 wwwroot\uploads\about\156c3363-511f-4fff-84b2-82053a1db7ef.jpg
 wwwroot\uploads\about\15f5cfe6-f09c-4d15-adc8-2a9eb5aac182.jpg
 wwwroot\uploads\about\1a562473-e6ae-48e8-9f50-1a0e92a7dccb.avif
@@ -862,8 +863,12 @@ wwwroot\uploads\about\8f208d11-6455-4a5f-b57c-ae64d0e8f2bb.jpg
 wwwroot\uploads\about\d59f5e90-8e6b-46c5-898c-4344bf4f9195.avif
 wwwroot\uploads\about\dca41cc9-fdcb-4384-bd59-2a6d72aaf138.avif
 wwwroot\uploads\about\e1095d36-3924-47f3-9d4d-38e4d4801c7c.webp
+wwwroot\uploads\authors\09e010d7-6aa1-4fd2-a7b6-2063e8f5c5aa.jpg
 wwwroot\uploads\authors\401431d1-eb8d-47c5-a793-13c9fc8caf07.jpg
+wwwroot\uploads\authors\ad6dbeb4-fa19-4015-931c-c282bb4a4996.png
 wwwroot\uploads\authors\be605f3f-d443-4088-86b2-4e225585dd22.jpg
+wwwroot\uploads\authors\de3bc93c-e233-415b-a144-11a9ea14209d.webp
+wwwroot\uploads\authors\fb89f772-9b60-4f9c-a4d7-2a2059a00d27.jpg
 wwwroot\uploads\blog\34a03ecc-b2c3-4638-accf-62e5f4d5747b.jpg
 wwwroot\uploads\blog\7fbdcbc7-78a3-4aa3-8b3f-793e7f58df05.jpg
 wwwroot\uploads\blog\c1fa1f38-6f70-481a-b531-97ed8ad02c11.jpg
@@ -881,6 +886,9 @@ wwwroot\uploads\partners\7a8374af-a0cb-42ca-8110-85a1c6406fda.png
 wwwroot\uploads\partners\7fdad7bf-9858-46c6-b51b-e63b6876f22a.png
 wwwroot\uploads\partners\8d49c562-332f-4dee-9fd9-9f4db6f1c973.png
 wwwroot\uploads\partners\c6c21740-37ca-4d35-9bae-dfed7801f6f8.png
+wwwroot\uploads\products\25830136-0017-46b0-9f19-e64f8bc2d2ce.jpg
+wwwroot\uploads\products\5317202e-1912-46c0-9b00-5c3f06b2cefc.webp
+wwwroot\uploads\products\9635c881-4cfb-45a5-b983-ab576acba281.jpg
 wwwroot\uploads\products\97ff9ef5-a264-443b-8f65-5fd75b1b19d1.jpg
 wwwroot\uploads\products\eaaabceb-f528-4bef-b59f-9bab3f0a35fb.jpg
 wwwroot\uploads\sliders\89b8547e-4672-4b9c-8bed-becff4f9303e_main-banner2.jpg
